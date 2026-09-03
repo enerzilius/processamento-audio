@@ -16,6 +16,14 @@ Humanos só conseguem ouvir frequências de 20kHz a 22kHz. Quanto maior a frequ�
 
 Vai servir pra decompor um sinal em seus componentes de frequência -> desmonta a síntese.
 
+### Short Time FT
+
+Divide o sinal em segmentos menores e calcula a transformada pra cada segmento -> Produz um **esectograma** e permite a visualização de harmonias, etc.
+
+- **tamanho da janela** - Quantas amostras em cada segmento. Os componentes (bins) vão ser metade do número de amostras no segmento.
+- O intervalo de frequências vai ser: delta_f = f_s / N
+  - O N vai determinar a resolução/qualidade do espectograma
+
 ## Teorema de Nynquist
 
 Pra reconstruir um sinal com amostras, é necessário que a frequência de amostragem seja pelo menos o dobro da maior frequência presente no sinal. Ou seja, paracapturar frequências de até 22kHz (limite da audição humana), a f_s tem que ser de 44.1kHz.
