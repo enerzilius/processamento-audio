@@ -29,3 +29,11 @@ Divide o sinal em segmentos menores e calcula a transformada pra cada segmento -
 Pra reconstruir um sinal com amostras, é necessário que a frequência de amostragem seja pelo menos o dobro da maior frequência presente no sinal. Ou seja, paracapturar frequências de até 22kHz (limite da audição humana), a f_s tem que ser de 44.1kHz.
 
 Se não for feito assim, pode ocorrer o *aliasing*, onde frequências mais altas são confundidas com frequências mais baixas.
+
+## Análise de espectograma
+
+Sons humanos como um bebê chorando, canto, fala e etc. vão apresentar harmonia (a mesma coisa se repete no eixo da frequências). Sons como chuva e ondas do mar são mais uniformes tanto em faixa quanto em tempo.
+
+[]("imagens/espectograma_ondas.jpg")
+
+Esse sinal pode então ser classificado e rotulado.
