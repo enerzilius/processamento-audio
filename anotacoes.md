@@ -37,3 +37,32 @@ Sons humanos como um bebê chorando, canto, fala e etc. vão apresentar harmonia
 []("imagens/espectograma_ondas.jpg")
 
 Esse sinal pode então ser classificado e rotulado.
+
+## Classificação de eventos acústicos
+
+Consiste em descobrir o que aconteceu com base em um som, como: latidos, sirene, vidro quebrando, choro de bebê, etc.
+
+### Aprendizagem de máquina
+
+Aqui vai ser usado ao dar vários exemplos de som e a máquina reconhece as semelhanças entre os padrões.
+
+Etapas:
+
+#### 1. Extração de características: Transforma o áudio em uma representação numérica que mantenha as características relevantes do som
+
+- Energia: intensidade média do sinal
+- Centróide espectral: indica se o som tende a graves ou agudos
+- Rolloff espectral: frequência abaixo da qual está 85% de Energia
+- Flatness espectral: Mede se o espectro parece mais com ruído
+- Mel-Frequency Cepstral Coefficients: Representação de timbre segundo a escala Mel
+- Taxa de Cruzamento por Zero (ZCR): Quantas vezes o sinal cruza o 0
+
+**Agregação**: Agregar os dados, aqui pode ser feito uma média de cada característica pelo tempo todo. Cada áudio vira um vetor de 35 posições que representam pontos em algo de 35 dimensões
+
+O modelo de classificação usado será: Máquina de Vetores de Suporte (SVM). Para utilizá-lo, temos que padronizar a escala, aqui com o *Z-Score*.
+Tem um kernel, sendo o Radial Nasis Function (não linear)
+Tem hiperparâmetros que tem que ser configurados (C e gamma)
+
+#### 2. Treinamento do Modelo: Usar as características extraídas para treinar um modelo
+
+#### 3. A valiação do Modelo: Testa o modelo em dados não visto para medir a capacidade de generalização
